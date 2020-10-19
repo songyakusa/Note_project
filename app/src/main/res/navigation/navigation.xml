@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/addlist">
+
+    <fragment
+        android:id="@+id/addlist"
+        android:name="com.example.note_project.Addlist"
+        android:label="Addlist" >
+        <action
+            android:id="@+id/action_addlist_to_myteam"
+            app:destination="@id/myteam" />
+    </fragment>
+    <fragment
+        android:id="@+id/myteam"
+        android:name="com.example.note_project.Myteam"
+        android:label="Myteam" >
+        <action
+            android:id="@+id/action_myteam_to_addlist"
+            app:destination="@id/addlist" />
+    </fragment>
+</navigation>
